@@ -1,15 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import Logo from "@/public/LOGO SIMBARA.png";
 import { AOSInit } from "./aos";
-import {
-	first_0,
-	first_1,
-	first_2,
-	first_3,
-	first_4,
-	first_5,
-	first_6,
-} from "@/public/dokum";
+import { first_0, first_1, first_2, first_3 } from "@/public/dokum";
+import { useEffect } from "react";
 
 function CountDownBox({ value, label }: { value: string; label: string }) {
 	return (
@@ -239,7 +234,6 @@ export default function Home() {
 	return (
 		<main>
 			<AOSInit />
-
 			<section className="w-full h-[85vh] bg-white flex flex-col items-center justify-center relative text-center ">
 				<BGPATTERN />
 
