@@ -43,13 +43,13 @@ const config: Config = {
 				bcyan: "#B3DCCF",
 			},
 			dropShadow: {
-				glow: [
-					"0 0px 5px rgba(255, 255, 255, 0.25)",
-					"0 0px 15px rgba(255, 255, 255, 0.15)",
+				glowYellow: [
+					"0 0px 5px rgba(242, 179, 102, 1)",
+					"0 0px 15px rgba(242, 179, 102, 0.5)",
 				],
-				glowWide: [
-					"0 0px 20px rgba(255,255, 255, 0.35)",
-					"0 0px 65px rgba(255, 255,255, 0.2)",
+				glow: [
+					"0 0px 5px rgba(179, 220, 207, 1)",
+					"0 0px 15px rgba(179, 220, 207, 0.15)",
 				],
 			},
 		},

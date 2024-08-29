@@ -287,7 +287,7 @@ export default function Home() {
 			<section className="space-y-4 py-12 relative overflow-clip">
 				<BGPATTERN />
 				<div
-					className="flex w-full justify-end gap-x-2 relative overflow-hidden bg-byellow drop-shadow-glow"
+					className="flex w-full justify-end gap-x-2 relative overflow-hidden bg-byellow drop-shadow-glowYellow"
 					data-aos="fade-right">
 					<div className="flex gap-x-2 shrink-0 animate-infinite-scroll-right">
 						<FirstCarouselImages />
@@ -297,7 +297,7 @@ export default function Home() {
 					</div>
 				</div>
 				<div
-					className="flex w-full justify-start gap-x-2 relative overflow-hidden bg-byellow drop-shadow-glow"
+					className="flex w-full justify-start gap-x-2 relative overflow-hidden bg-byellow drop-shadow-glowYellow"
 					data-aos="fade-left">
 					<div className="flex gap-x-2 shrink-0 animate-infinite-scroll-left">
 						<FirstCarouselImages />
@@ -308,7 +308,7 @@ export default function Home() {
 				</div>
 			</section>
 			<TimelineSection />
-			<section className="relative w-full py-12 xl:px-96  text-white">
+			<section className="relative w-full py-12 px-8 xl:px-96  text-white">
 				<BGPATTERN />
 				<h1
 					className="text-3xl md:text-4xl font-bold text-center"
@@ -319,7 +319,7 @@ export default function Home() {
 					className="bg-byellow w-full py-4 px-8 rounded-sm mt-24"
 					data-aos="zoom-in"
 					data-aos-offset="120">
-					<h1 className="text-xl font-bold">Danish Ghaisan Putera Ahmadi</h1>
+					<h1 className="text-xl font-bold">Choiru Ummi Muthalamah</h1>
 					<p className="text-lg mt-2 text-flamingo">Whatsapp: 081219318988</p>
 				</div>
 			</section>

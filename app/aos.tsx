@@ -10,6 +10,7 @@ export const AOSInit = () => {
 			easing: "ease-out-quad",
 			duration: 750,
 			offset: 250,
+			once: true,
 		});
 	}, []);
 
