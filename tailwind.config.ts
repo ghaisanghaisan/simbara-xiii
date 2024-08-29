@@ -47,6 +47,10 @@ const config: Config = {
 					"0 0px 5px rgba(242, 179, 102, 1)",
 					"0 0px 15px rgba(242, 179, 102, 0.5)",
 				],
+				glowRed: [
+					"0 0px 5px rgba(239, 66, 46, 1)",
+					"0 0px 25px rgba(239, 66, 46, 0.25)",
+				],
 				glow: [
 					"0 0px 5px rgba(179, 220, 207, 1)",
 					"0 0px 15px rgba(179, 220, 207, 0.15)",

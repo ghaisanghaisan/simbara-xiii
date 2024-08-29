@@ -26,9 +26,9 @@ function MenuIcon() {
 
 export default function Navbar() {
 	return (
-		<nav className="w-full bg-night h-[60px] md:h-[80px] px-4 md:px-8 flex justify-between items-center fixed z-50 border-b-4 py-2 border-bcyan drop-shadow-glow">
+		<nav className="w-full bg-night h-[60px] md:h-[80px] px-4 md:px-36 flex justify-between items-center fixed z-50 border-b-4 py-2 border-bcyan drop-shadow-glow">
 			<Link href="/" className="h-full w-auto aspect-square">
-				<Image src={SIMBARA} alt="simbara" />
+				<Image src={SIMBARA} alt="simbara" height="400" width="400" />
 			</Link>
 			<div className="h-full p-2 md:p-3 rounded-md w-auto aspect-square hover:bg-base-100">
 				<div className="drawer drawer-end">
