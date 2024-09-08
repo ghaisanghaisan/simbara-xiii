@@ -118,6 +118,7 @@ function FirstCarouselImages() {
 		</>
 	);
 }
+
 function SecondCarouselImages() {
 	const imgclass = "h-[200px] lg:h-[300px] w-auto aspect-video bg-gray-300";
 	return (
@@ -161,128 +162,23 @@ function SecondCarouselImages() {
 	);
 }
 
-function TimelineSection() {
-	const timelineLeft =
-		"timeline-start timeline-box mr-4 md:mr-8 px-2 border-none rounded-lg py-4 bg-byellow drop-shadow-lg w-full";
-	const timelineRight =
-		"timeline-end timeline-box ml-4 md:ml-8 px-2 border-none rounded-lg py-4 bg-byellow  drop-shadow-lg w-full";
-
-	const cardDuration = "";
-	const pointDuration = "250";
-	const pointOffset = "150";
-
-	const TimelineNumber = ({ num }: { num: number }) => {
-		return (
-			<div
-				data-aos="zoom-in"
-				data-aos-duration={pointDuration}
-				data-aos-offset={pointOffset}>
-				<div
-					className="bg-flamingo text-md md:text-2xl font-bold w-auto aspect-square h-6 md:h-10 rounded-full place-items-center grid hover:drop-shadow-glowRed
-transition-all ease-in-out duration-500">
-					{num}
-				</div>
-			</div>
-		);
-	};
-	const TimelineEvent = ({ title, date }: { title: string; date: string }) => {
-		return (
-			<div className="text-center">
-				<h1 className="text-md md:text-3xl font-bold">{title}</h1>
-				<p className="mt-2 text-xs md:text-lg font-bold text-flamingo">
-					{date} <br className="md:hidden" />
-					2024
-				</p>
-			</div>
-		);
-	};
+function CountdownRenderer({
+	days,
+	hours,
+	minutes,
+	completed,
+}: {
+	days: number;
+	hours: number;
+	minutes: number;
+	completed: boolean;
+}) {
 	return (
-		<section className="relative w-full py-24 px-8 md:px-16 xl:px-96 text-white overflow-clip">
-			<BGPATTERN />
-			<h1
-				className="text-3xl md:text-4xl font-bold text-center"
-				data-aos="fade-up">
-				Timeline Kegiatan
-			</h1>
-			<ul className="timeline timeline-vertical mt-24">
-				<li>
-					<div
-						className={timelineLeft}
-						data-aos="fade-left"
-						data-aos-duration="500">
-						<TimelineEvent title="Pembukaan Registrasi" date="4 September" />
-					</div>
-					<div className="timeline-middle">
-						<TimelineNumber num={1} />
-					</div>
-					<hr
-						data-aos="zoom-in"
-						data-aos-duration={pointDuration}
-						data-aos-offset={pointOffset}
-					/>
-				</li>
-				<li>
-					<hr
-						data-aos="zoom-in"
-						data-aos-duration={pointDuration}
-						data-aos-offset={pointOffset}
-					/>
-					<div
-						className={timelineRight}
-						data-aos="fade-left"
-						data-aos-duration="500">
-						<TimelineEvent title="Technical Meeting" date="3 November" />
-					</div>
-					<div className="timeline-middle">
-						<TimelineNumber num={2} />
-					</div>
-					<hr
-						data-aos="zoom-in"
-						data-aos-duration={pointDuration}
-						data-aos-offset={pointOffset}
-					/>
-				</li>
-				<li>
-					<hr
-						data-aos="zoom-in"
-						data-aos-duration={pointDuration}
-						data-aos-offset={pointOffset}
-					/>
-
-					<div
-						className={timelineLeft}
-						data-aos="fade-right"
-						data-aos-duration="500">
-						<TimelineEvent title="Penutupan Pendaftaran" date="14 November" />
-					</div>
-					<div className="timeline-middle">
-						<TimelineNumber num={3} />
-					</div>
-					<hr
-						data-aos="zoom-in"
-						data-aos-duration={pointDuration}
-						data-aos-offset={pointOffset}
-					/>
-				</li>
-				<li>
-					<hr
-						data-aos="zoom-in"
-						data-aos-duration={pointDuration}
-						data-aos-offset={pointOffset}
-					/>
-
-					<div
-						className={timelineRight}
-						data-aos="fade-left"
-						data-aos-duration="500">
-						<TimelineEvent title="SIMBARA XIII" date="16 November" />
-					</div>
-					<div className="timeline-middle">
-						<TimelineNumber num={4} />
-					</div>
-				</li>
-			</ul>
-		</section>
+		<div className="flex bg-byellow p-2 rounded-sm z-10">
+			<CountDownBox value={days} label="Hari" additional="border-l-2" />
+			<CountDownBox value={hours} label="Jam" />
+			<CountDownBox value={minutes} label="Menit" additional="border-r-2" />
+		</div>
 	);
 }
 
@@ -306,26 +202,6 @@ function HeroSection() {
 				Utopian Visionary Quest
 			</h1>
 		</section>
-	);
-}
-
-function CountdownRenderer({
-	days,
-	hours,
-	minutes,
-	completed,
-}: {
-	days: number;
-	hours: number;
-	minutes: number;
-	completed: boolean;
-}) {
-	return (
-		<div className="flex bg-byellow p-2 rounded-sm z-10">
-			<CountDownBox value={days} label="Hari" additional="border-l-2" />
-			<CountDownBox value={hours} label="Jam" />
-			<CountDownBox value={minutes} label="Menit" additional="border-r-2" />
-		</div>
 	);
 }
 
@@ -397,6 +273,131 @@ function DocumentationSection() {
 	);
 }
 
+function TimelineSection() {
+	const timelineLeft =
+		"timeline-start timeline-box mr-4 md:mr-8 px-2 border-none rounded-lg py-4 bg-byellow drop-shadow-lg w-full";
+	const timelineRight =
+		"timeline-end timeline-box ml-4 md:ml-8 px-2 border-none rounded-lg py-4 bg-byellow  drop-shadow-lg w-full";
+
+	const cardDuration = "";
+	const pointDuration = "250";
+	const pointOffset = "150";
+
+	const TimelineNumber = ({ num }: { num: number }) => {
+		return (
+			<div
+				data-aos="zoom-in"
+				data-aos-duration={pointDuration}
+				data-aos-offset={pointOffset}>
+				<div
+					className="bg-flamingo text-md md:text-2xl font-bold w-auto aspect-square h-6 md:h-10 rounded-full place-items-center grid hover:drop-shadow-glowRed
+transition-all ease-in-out duration-500">
+					{num}
+				</div>
+			</div>
+		);
+	};
+	const TimelineEvent = ({ title, date }: { title: string; date: string }) => {
+		return (
+			<div className="text-center">
+				<h1 className="text-md md:text-3xl font-bold">{title}</h1>
+				<p className="mt-2 text-xs md:text-lg font-bold text-flamingo">
+					{date} <br className="md:hidden" />
+					2024
+				</p>
+			</div>
+		);
+	};
+	return (
+		<section className="relative w-full py-24 px-8 md:px-16 xl:px-96 text-white overflow-clip">
+			<BGPATTERN />
+			<h1
+				className="text-3xl md:text-4xl font-bold text-center"
+				data-aos="fade-up">
+				Timeline Kegiatan
+			</h1>
+			<ul className="timeline timeline-vertical mt-24">
+				<li>
+					<div
+						className={timelineLeft}
+						data-aos="fade-left"
+						data-aos-duration="500">
+						<TimelineEvent title="Pembukaan Registrasi" date="4 September" />
+					</div>
+					<div className="timeline-middle">
+						<TimelineNumber num={1} />
+					</div>
+					<hr
+						data-aos="zoom-in"
+						data-aos-duration={pointDuration}
+						data-aos-offset={pointOffset}
+					/>
+				</li>
+				<li>
+					<hr
+						data-aos="zoom-in"
+						data-aos-duration={pointDuration}
+						data-aos-offset={pointOffset}
+					/>
+					<div
+						className={timelineRight}
+						data-aos="fade-right"
+						data-aos-duration="500">
+						<TimelineEvent title="Technical Meeting" date="3 November" />
+					</div>
+					<div className="timeline-middle">
+						<TimelineNumber num={2} />
+					</div>
+					<hr
+						data-aos="zoom-in"
+						data-aos-duration={pointDuration}
+						data-aos-offset={pointOffset}
+					/>
+				</li>
+				<li>
+					<hr
+						data-aos="zoom-in"
+						data-aos-duration={pointDuration}
+						data-aos-offset={pointOffset}
+					/>
+
+					<div
+						className={timelineLeft}
+						data-aos="fade-left"
+						data-aos-duration="500">
+						<TimelineEvent title="Penutupan Pendaftaran" date="14 November" />
+					</div>
+					<div className="timeline-middle">
+						<TimelineNumber num={3} />
+					</div>
+					<hr
+						data-aos="zoom-in"
+						data-aos-duration={pointDuration}
+						data-aos-offset={pointOffset}
+					/>
+				</li>
+				<li>
+					<hr
+						data-aos="zoom-in"
+						data-aos-duration={pointDuration}
+						data-aos-offset={pointOffset}
+					/>
+
+					<div
+						className={timelineRight}
+						data-aos="fade-right"
+						data-aos-duration="500">
+						<TimelineEvent title={"SIMBARA XIII"} date="16 November" />
+					</div>
+					<div className="timeline-middle">
+						<TimelineNumber num={4} />
+					</div>
+				</li>
+			</ul>
+		</section>
+	);
+}
+
 function ContactSection() {
 	return (
 		<section className="relative w-full py-12 px-8 xl:px-96  text-white">
@@ -411,7 +412,7 @@ function ContactSection() {
 				target="_blank"
 				data-aos="zoom-in"
 				data-aos-offset="120">
-				<div className="bg-byellow w-full h-min py-4 px-8 rounded-sm mt-12 hover:drop-shadow-glowYellow transition-all ease-in-out duration-500">
+				<div className=" bg-byellow w-full h-min py-4 px-8 rounded-sm mt-12 hover:drop-shadow-glowYellow transition-all ease-in-out duration-500">
 					<h1 className="text-lg md:text-2xl font-bold">
 						Choiru Ummi Muthalamah
 					</h1>
@@ -433,6 +434,27 @@ export default function Home() {
 			<DescSection />
 			<DocumentationSection />
 			<TimelineSection />
+			<section className="relative w-full py-12 px-8 xl:px-96  text-white">
+				<BGPATTERN />
+				<h1
+					className="text-3xl md:text-4xl font-bold text-center"
+					data-aos="fade-up">
+					Pertanyaan & Jawaban
+				</h1>
+				<div data-aos="zoom-in" data-aos-offset="120">
+					<div
+						tabIndex={0}
+						className=" collapse collapse-arrow bg-byellow w-full h-min py-4 px-8 rounded-sm mt-12 hover:drop-shadow-glowYellow transition-all ease-in-out duration-200">
+						<input type="checkbox" />
+						<div className="collapse-title text-lg md:text-2xl font-bold">
+							Berapa maksimal tim yang dapat dikirim?
+						</div>
+						<div className="collapse-content text-md md:text-xl">
+							<p>Untuk setiap tim diperbolehkan mengirimkan maksimal</p>
+						</div>
+					</div>
+				</div>
+			</section>
 			<ContactSection />
 		</main>
 	);
