@@ -398,6 +398,47 @@ transition-all ease-in-out duration-500">
 	);
 }
 
+function QNASection() {
+	const Question = ({
+		question,
+		answer,
+	}: {
+		question: string;
+		answer: string;
+	}) => {
+		return (
+			<div data-aos="zoom-in" data-aos-offset="120">
+				<div
+					tabIndex={0}
+					className="collapse collapse-arrow bg-byellow w-full h-min py-4 px-8 rounded-sm mt-12 hover:drop-shadow-glowYellow transition-all ease-in-out duration-200">
+					<input type="checkbox" />
+					<div className="collapse-title text-lg md:text-2xl font-bold">
+						{question}
+					</div>
+					<div className="collapse-content text-md md:text-xl">
+						<p>{answer}</p>
+					</div>
+				</div>
+			</div>
+		);
+	};
+
+	return (
+		<section className="relative w-full py-12 px-8 xl:px-96  text-white">
+			<BGPATTERN />
+			<h1
+				className="text-3xl md:text-4xl font-bold text-center"
+				data-aos="fade-up">
+				Pertanyaan & Jawaban
+			</h1>
+			<Question
+				question="Berapa banyak tim maksimal yang dapat dikirim?"
+				answer="Maksimal tim yang dapat dikirimkan adalah x tim per sekolah"
+			/>
+		</section>
+	);
+}
+
 function ContactSection() {
 	return (
 		<section className="relative w-full py-12 px-8 xl:px-96  text-white">
@@ -434,27 +475,7 @@ export default function Home() {
 			<DescSection />
 			<DocumentationSection />
 			<TimelineSection />
-			<section className="relative w-full py-12 px-8 xl:px-96  text-white">
-				<BGPATTERN />
-				<h1
-					className="text-3xl md:text-4xl font-bold text-center"
-					data-aos="fade-up">
-					Pertanyaan & Jawaban
-				</h1>
-				<div data-aos="zoom-in" data-aos-offset="120">
-					<div
-						tabIndex={0}
-						className=" collapse collapse-arrow bg-byellow w-full h-min py-4 px-8 rounded-sm mt-12 hover:drop-shadow-glowYellow transition-all ease-in-out duration-200">
-						<input type="checkbox" />
-						<div className="collapse-title text-lg md:text-2xl font-bold">
-							Berapa maksimal tim yang dapat dikirim?
-						</div>
-						<div className="collapse-content text-md md:text-xl">
-							<p>Untuk setiap tim diperbolehkan mengirimkan maksimal</p>
-						</div>
-					</div>
-				</div>
-			</section>
+			<QNASection />
 			<ContactSection />
 		</main>
 	);

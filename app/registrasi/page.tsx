@@ -22,49 +22,75 @@ const readfile = (file: any) => {
 
 interface FormDataType {
 	Nama: string;
-	Tim: string;
 	Nomor: string;
+	Tim: string;
+	Asal: string;
+	Jumlah: string;
+	Formulir: any;
 	Foto: any;
+	Bukti: any;
 	[key: string]: any;
 }
 
 const InputSection = ({
 	title,
+	desc,
 	name,
 	type,
 	value,
 	onChange,
 }: {
 	title: string;
+	desc?: string;
 	name: string;
 	type: string;
 	value: string | "";
-	onChange: (e: any) => void;
+	onChange?: (e: any) => void;
 }) => {
-	if (type === "file") {
-		return (
-			<div className="bg-night px-12 py-6 rounded-lg">
-				<h2 className="text-xl mb-2 font-bold">{title}</h2>
-				<input
-					type="file"
-					name={name}
-					className="file-input file-input-secondary file-input-bordered file-input-md w-full text-bcyan"
-					required
-				/>
-			</div>
-		);
-	}
 	return (
 		<div className="bg-night px-12 py-6 rounded-lg">
 			<h2 className="text-xl mb-2 font-bold">{title}</h2>
-			<input
-				name={name}
-				type="text"
-				className="w-full text-black px-2 font-bold"
-				value={value}
-				onChange={onChange}
-				required
-			/>
+			<p className="text-lg mb-4">{desc}</p>
+			{type === "text" ? (
+				<input
+					name={name}
+					type="text"
+					className="w-full text-black px-2 font-bold"
+					value={value}
+					onChange={onChange}
+					required
+				/>
+			) : (
+				""
+			)}
+			{type === "select" ? (
+				<>
+					<select
+						name={name}
+						className="select w-full max-w-xs"
+						onChange={onChange}>
+						<option disabled selected>
+							Pilih jumlah pasukan mu
+						</option>
+						<option>12</option>
+						<option>15</option>
+					</select>
+				</>
+			) : (
+				""
+			)}
+			{type === "file" ? (
+				<>
+					<input
+						type="file"
+						name={name}
+						className="file-input file-input-secondary file-input-bordered file-input-md w-full text-bcyan"
+						required
+					/>
+				</>
+			) : (
+				""
+			)}
 		</div>
 	);
 };
@@ -80,70 +106,94 @@ export default function Registrasi() {
 
 	const [formState, setFormState] = useState<FormDataType>({
 		Nama: "",
-		Tim: "",
 		Nomor: "",
+		Tim: "",
+		Asal: "",
+		Jumlah: "",
+		Formulir: null,
 		Foto: null,
+		Bukti: null,
 	});
 
 	const onSubmit = (e: any) => {
 		setLoading(true);
 		e.preventDefault();
 
-		const HEADERS = ["Nama", "Tim", "Nomor"];
+		const HEADERS = ["Nama", "Nomor", "Tim", "Asal", "Jumlah"];
 		const form = e.currentTarget;
-		var formData: FormDataType = { Nama: "", Tim: "", Nomor: "", Foto: "" };
+		var formData: FormDataType = {
+			Nama: "",
+			Nomor: "",
+			Tim: "",
+			Asal: "",
+			Jumlah: "",
+			Formulir: null,
+			Foto: null,
+			Bukti: null,
+		};
 
-		readfile(form["Foto"].files[0]).then((upload_obj) => {
-			formData["Foto"] = upload_obj;
+		// really bad code
 
-			HEADERS.forEach((header) => {
-				formData[header] = formState[header];
-			});
+		readfile(form["Formulir"].files[0])
+			.then((upload_obj) => {
+				formData["Formulir"] = upload_obj;
 
-			console.log(formData);
-
-			const URL =
-				"https://script.google.com/macros/s/AKfycbx_Zeez_fvMEViRbIbvUPxNfIwJ8Bnd9x1BIh2dES3cZMa7OQ-yQlUvsZ9jKvtYwNw/exec";
-
-			fetch(URL, {
-				method: "POST",
-				// headers: {
-				// 	"Content-Type": "multipart/form-data",
-				// },
-				body: JSON.stringify(formData),
+				return readfile(form["Foto"].files[0]);
 			})
-				.then(() => {
-					setLoading(false);
-					setSubmitMsg({
-						title: "Sukses!",
-						body: "Anda telah terdaftar sebagai peserta di SIMBARA XIII! Selamat bertanding!",
-					});
-					modalRef.current.showModal();
-				})
-				.catch((err) => {
-					setLoading(false);
-					setSubmitMsg({
-						title: "Error!",
-						body: "Tolong hubungi Contact Person mengenai masalah ini!",
-					});
-					modalRef.current.showModal();
+			.then((upload_obj) => {
+				formData["Foto"] = upload_obj;
+
+				return readfile(form["Bukti"].files[0]);
+			})
+			.then((upload_obj) => {
+				formData["Bukti"] = upload_obj;
+
+				HEADERS.forEach((header) => {
+					formData[header] = formState[header];
 				});
-		});
+
+				console.log(formData);
+
+				const URL =
+					"https://script.google.com/macros/s/AKfycbx_Zeez_fvMEViRbIbvUPxNfIwJ8Bnd9x1BIh2dES3cZMa7OQ-yQlUvsZ9jKvtYwNw/exec";
+
+				return fetch(URL, {
+					method: "POST",
+					// headers: {
+					// 	"Content-Type": "multipart/form-data",
+					// },
+					body: JSON.stringify(formData),
+				});
+			})
+			.then(() => {
+				setLoading(false);
+				setSubmitMsg({
+					title: "Sukses!",
+					body: "Anda telah terdaftar sebagai peserta di SIMBARA XIII! Selamat bertanding!",
+				});
+				modalRef.current.showModal();
+			})
+			.catch((err) => {
+				setLoading(false);
+				setSubmitMsg({
+					title: "Error!",
+					body: "Tolong hubungi Contact Person mengenai masalah ini!",
+				});
+				modalRef.current.showModal();
+			});
 	};
 
-	const handleTextInput = useCallback(
-		(e: React.ChangeEvent<HTMLInputElement>) => {
-			const { name, value } = e.target;
+	const handleTextInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const { name, value } = e.target;
 
-			// Use the function form to ensure you are updating the latest state
-			setFormState((prevState) => ({
-				...prevState,
-				[name]: value,
-			}));
-		},
-		[]
-	);
-
+		// Use the function form to ensure you are updating the latest state
+		setFormState((prevState) => ({
+			...prevState,
+			[name]: value,
+		}));
+		// console.log(name + value);
+		// console.log(formState);
+	};
 	return (
 		<section className="py-32 px-4 xl:px-96">
 			<div
@@ -170,32 +220,53 @@ export default function Registrasi() {
 			<h1 className="text-center text-white font-bold text-3xl ">Registrasi</h1>
 			<form method="POST" onSubmit={onSubmit} className="space-y-6 mt-12 ">
 				<InputSection
-					title="Nama"
+					title="Nama Perwakilan"
 					name="Nama"
 					type="text"
 					value={formState["Nama"]}
 					onChange={handleTextInput}
 				/>
 				<InputSection
-					title="Tim"
-					name="Tim"
-					type="text"
-					value={formState["Tim"]}
-					onChange={handleTextInput}
-				/>
-				<InputSection
-					title="Nomor"
+					title="Nomor Whatsapp Perwakilan"
 					name="Nomor"
 					type="text"
 					value={formState["Nomor"]}
 					onChange={handleTextInput}
 				/>
 				<InputSection
-					title="Bukti Transfer"
-					name="Foto"
+					title="Nama Tim"
+					name="Tim"
+					type="text"
+					value={formState["Tim"]}
+					onChange={handleTextInput}
+				/>
+				<InputSection
+					title="Asal Sekolah"
+					name="Asal"
+					type="text"
+					value={formState["Asal"]}
+					onChange={handleTextInput}
+				/>
+				<InputSection
+					title="Jumlah Pasukan"
+					name="Jumlah"
+					type="select"
+					value={formState["Jumlah"]}
+					onChange={handleTextInput}
+				/>
+				<InputSection
+					title="Formulir Pendaftaran"
+					desc="Loremsdkjflskdjflsdkjflsjflsdjflsjf;aiej"
+					name="Formulir"
 					type="file"
 					value=""
-					onChange={() => {}}
+				/>
+				<InputSection title="Foto Tim" name="Foto" type="file" value="" />
+				<InputSection
+					title="Bukti Transfer"
+					name="Bukti"
+					type="file"
+					value=""
 				/>
 
 				<button

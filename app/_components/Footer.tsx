@@ -41,8 +41,8 @@ export default function Footer() {
 				className="hover:drop-shadow-glowRed transition duration-150 ease-in w-auto h-20 md:h-40 aspect-square grayscale hover:grayscale-0"
 			/>
 			<div className="py-4">
-				<h1 className="text-xs md:text-xl font-bold text-bcyan">Links</h1>
-				<ul className="mt-2 text-xs md:text-xl">
+				<h1 className="text-md md:text-xl font-bold text-bcyan">Links</h1>
+				<ul className="mt-2 text-md md:text-xl">
 					<li className="hover:text-flamingo hover:drop-shadow-glowRed transition duration-150 ease-in">
 						<Link href="/home">Home</Link>
 					</li>
@@ -57,7 +57,7 @@ export default function Footer() {
 			<div className="py-4 flex gap-x-4">
 				<Link
 					href="https://www.instagram.com/paskibra55/"
-					className="h-5 md:h-10 w-auto aspect-square rounded-full bg-bcyan hover:drop-shadow-glow transition duration-150 ease-in p-1 md:p-2">
+					className="h-8 md:h-10 w-auto aspect-square rounded-full bg-bcyan hover:drop-shadow-glow transition duration-150 ease-in p-2">
 					<InstagramIcon />
 				</Link>
 			</div>
