@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.onhover-red {
+	@apply hover:drop-shadow-glowRed transition-all ease-in-out duration-500;
+}
+
+.onhover-yellow {
+	@apply hover:drop-shadow-glowYellow
+    transition-all ease-in-out duration-500;
+}
