@@ -4,7 +4,7 @@ import Image from "next/image";
 import Logo from "@/public/LOGO SIMBARA.png";
 import SIMBARA from "@/public/SIMBARA XIII.png";
 import { AOSInit } from "./aos";
-import { timeline_bg } from "@/public/backgrounds";
+import { description_bg, timeline_bg } from "@/public/backgrounds";
 import Countdown from "react-countdown";
 import Link from "next/link";
 
@@ -13,6 +13,7 @@ import ContactSection from "./_landing_slides/ContactSection";
 import QNASection from "./_landing_slides/QNASection";
 import DescSection from "./_landing_slides/DescriptionSection";
 import TimelineSection from "./_landing_slides/TimelineSection";
+import BGIMG from "./_components/BgIMG";
 
 function CountDownBox({
 	value,
@@ -87,11 +88,14 @@ export default function Home() {
 		<main className="overflow-hidden">
 			<AOSInit />
 			<HeroSection />
-			<CountdownSection />
-			<DescSection />
-			<DocumentationSection />
+			<section className="relative">
+				<BGIMG src={description_bg} />
+				<CountdownSection />
+				<DescSection />
+				<DocumentationSection />
+			</section>
 			<TimelineSection />
-			<QNASection />
+			{/* <QNASection />  QNA is in contact */}
 			<ContactSection />
 		</main>
 	);

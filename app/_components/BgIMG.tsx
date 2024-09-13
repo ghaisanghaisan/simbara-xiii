@@ -6,7 +6,7 @@ export default function BGIMG({ src }: { src: StaticImageData }) {
 			height="1800"
 			src={src}
 			alt=""
-			className="absolute z-[-1] top-0 left-0 object-cover w-full h-full"
+			className="absolute -z-10 top-0 left-0 h-full  object-cover lg:object-fill"
 		/>
 	);
 }

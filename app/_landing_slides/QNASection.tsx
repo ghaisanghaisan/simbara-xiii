@@ -1,4 +1,4 @@
-import { timeline_event } from "@/public/elements";
+import { card_orange, timeline_event } from "@/public/elements";
 import Image from "next/image";
 export default function QNASection() {
 	const Question = ({
@@ -15,7 +15,7 @@ export default function QNASection() {
 					className="relative collapse collapse-arrow  w-full h-min py-4 px-8 rounded-sm mt-4  duration-300 onhover-red">
 					<Image
 						alt=""
-						src={timeline_event}
+						src={card_orange}
 						className="absolute left-0 top-0 w-full h-full -z-10"
 					/>
 					<input type="checkbox" />

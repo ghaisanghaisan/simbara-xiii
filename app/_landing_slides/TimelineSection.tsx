@@ -1,5 +1,5 @@
 import { timeline_bg } from "@/public/backgrounds";
-import { timeline_event } from "@/public/elements";
+import { card_orange } from "@/public/elements";
 import Image from "next/image";
 import BGIMG from "../_components/BgIMG";
 
@@ -16,7 +16,7 @@ const TimelineLeft = ({ children }: { children: React.ReactNode }) => {
 			{children}
 			<Image
 				alt=""
-				src={timeline_event}
+				src={card_orange}
 				className="absolute left-0 top-0 w-full h-full -z-10"
 			/>
 		</div>
@@ -32,7 +32,7 @@ const TimelineRight = ({ children }: { children: React.ReactNode }) => {
 			{children}
 			<Image
 				alt=""
-				src={timeline_event}
+				src={card_orange}
 				className="absolute left-0 top-0 w-full h-full -z-10"
 			/>
 		</div>
