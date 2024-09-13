@@ -1,5 +1,6 @@
-import { card_orange, timeline_event } from "@/public/elements";
+import { card_orange } from "@/public/elements";
 import Image from "next/image";
+
 export default function QNASection() {
 	const Question = ({
 		question,
