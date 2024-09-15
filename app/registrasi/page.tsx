@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useRef, useState } from "react";
 
 const readfile = (file: any) => {
@@ -23,9 +24,12 @@ const readfile = (file: any) => {
 interface FormDataType {
 	Nama: string;
 	Nomor: string;
+	Email: string;
 	Tim: string;
 	Asal: string;
 	Jumlah: string;
+	Pelatih: string;
+	NoPelatih: string;
 	Formulir: any;
 	Foto: any;
 	Bukti: any;
@@ -48,16 +52,16 @@ const InputSection = ({
 	onChange?: (e: any) => void;
 }) => {
 	return (
-		<div className="bg-night px-12 py-6 rounded-lg">
-			<h2 className="text-xl mb-2 font-bold">{title}</h2>
-			<p className="text-lg mb-4">{desc}</p>
+		<div className="bg-night px-6 md:px-12 py-6 rounded-lg">
+			<h2 className="text-xl mb-4 font-bold">{title}</h2>
 			{type === "text" ? (
 				<input
 					name={name}
 					type="text"
-					className="w-full text-black px-2 font-bold"
+					className="w-full text-black p-2 font-bold"
 					value={value}
 					onChange={onChange}
+					placeholder={desc}
 					required
 				/>
 			) : (
@@ -107,9 +111,12 @@ export default function Registrasi() {
 	const [formState, setFormState] = useState<FormDataType>({
 		Nama: "",
 		Nomor: "",
+		Email: "",
 		Tim: "",
 		Asal: "",
 		Jumlah: "",
+		Pelatih: "",
+		NoPelatih: "",
 		Formulir: null,
 		Foto: null,
 		Bukti: null,
@@ -119,14 +126,26 @@ export default function Registrasi() {
 		setLoading(true);
 		e.preventDefault();
 
-		const HEADERS = ["Nama", "Nomor", "Tim", "Asal", "Jumlah"];
+		const HEADERS = [
+			"Nama",
+			"Nomor",
+			"Email",
+			"Tim",
+			"Asal",
+			"Jumlah",
+			"Pelatih",
+			"NoPelatih",
+		];
 		const form = e.currentTarget;
 		var formData: FormDataType = {
 			Nama: "",
 			Nomor: "",
+			Email: "",
 			Tim: "",
 			Asal: "",
 			Jumlah: "",
+			Pelatih: "",
+			NoPelatih: "",
 			Formulir: null,
 			Foto: null,
 			Bukti: null,
@@ -195,7 +214,7 @@ export default function Registrasi() {
 		// console.log(formState);
 	};
 	return (
-		<section className="py-32 px-4 xl:px-96">
+		<section className="bg-base-100 text-white py-32 px-2 xl:px-96">
 			<div
 				className={`${
 					loading ? "grid" : "hidden"
@@ -218,11 +237,34 @@ export default function Registrasi() {
 				</div>
 			</dialog>
 			<h1 className="text-center text-white font-bold text-3xl ">Registrasi</h1>
+			<div className="bg-night px-6 md:px-12 py-6 rounded-lg mt-12">
+				<h1 className="text-xl font-bold">Baca terlebih dahulu</h1>
+				<ol className="list-decimal list-inside text-xl mt-2">
+					<li>
+						Pastikan sudah membaca{" "}
+						<Link href="/peraturan" className="font-bold text-bcyan">
+							Peraturan Umum & Juknis Lomba
+						</Link>
+						.
+					</li>
+					<li>
+						Data yang sudah di-input tidak tersimpan jika keluar dari laman ini
+						atau di refresh.
+					</li>
+					<li>
+						Dengan mengisi dan mengirim formulir ini anda setuju dengan{" "}
+						<Link href="/snk" className="font-bold text-bcyan">
+							Syarat & Ketentuan Lomba.
+						</Link>
+					</li>
+				</ol>
+			</div>
 			<form method="POST" onSubmit={onSubmit} className="space-y-6 mt-12 ">
 				<InputSection
 					title="Nama Perwakilan"
 					name="Nama"
 					type="text"
+					desc="Masukkan nama lengkap perwakilan"
 					value={formState["Nama"]}
 					onChange={handleTextInput}
 				/>
@@ -231,12 +273,38 @@ export default function Registrasi() {
 					name="Nomor"
 					type="text"
 					value={formState["Nomor"]}
+					desc="Masukkan nomor aktif perwakilan"
+					onChange={handleTextInput}
+				/>
+				<InputSection
+					title="Email Perwakilan"
+					name="Email"
+					type="text"
+					value={formState["Email"]}
+					desc="Masukkan email aktif perwakilan"
+					onChange={handleTextInput}
+				/>
+				<InputSection
+					title="Nama Pelatih"
+					name="Pelatih"
+					type="text"
+					desc="Masukkan nama pelatih anda"
+					value={formState["Pelatih"]}
+					onChange={handleTextInput}
+				/>
+				<InputSection
+					title="Nomor Pelatih"
+					name="No Pelatih"
+					type="text"
+					desc="Masukkan nomor pelatih anda"
+					value={formState["NoPelatih"]}
 					onChange={handleTextInput}
 				/>
 				<InputSection
 					title="Nama Tim"
 					name="Tim"
 					type="text"
+					desc="Masukkan nama tim anda"
 					value={formState["Tim"]}
 					onChange={handleTextInput}
 				/>
@@ -244,6 +312,7 @@ export default function Registrasi() {
 					title="Asal Sekolah"
 					name="Asal"
 					type="text"
+					desc="Masukkan asal sekolah anda"
 					value={formState["Asal"]}
 					onChange={handleTextInput}
 				/>

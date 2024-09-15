@@ -4,7 +4,7 @@ import Image from "next/image";
 import Logo from "@/public/LOGO SIMBARA.png";
 import SIMBARA from "@/public/SIMBARA XIII.png";
 import { AOSInit } from "./aos";
-import { description_bg, timeline_bg } from "@/public/backgrounds";
+import { description_bg, hero_bg } from "@/public/backgrounds";
 import Countdown from "react-countdown";
 import Link from "next/link";
 
@@ -55,18 +55,19 @@ function CountdownRenderer({
 
 function HeroSection() {
 	return (
-		<section className="w-full h-[85vh] bg-white flex flex-col items-center justify-center relative text-center ">
+		<section className="w-full h-[85vh]  flex flex-col items-center justify-center relative text-center ">
+			<BGIMG src={hero_bg} />;
 			<Image
 				alt="Logo Simbara"
 				src={Logo}
 				className="w-auto h-2/5 md:h-1/2 aspect-square z-10"
 			/>
-			<svg
+			{/* <svg
 				className="w-[100vw] h-full absolute bottom-0 fill-base-100"
 				preserveAspectRatio="none"
 				viewBox="0 0 2 12">
 				<polygon points="0,12 2,12 1,6" />
-			</svg>
+			</svg> */}
 			<h1 className="text-2xl md:text-4xl mt-8 text-bcyan font-bold z-10 drop-shadow-glow">
 				Utopian Visionary Quest
 			</h1>

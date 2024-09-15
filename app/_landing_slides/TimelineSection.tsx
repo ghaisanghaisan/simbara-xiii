@@ -66,7 +66,7 @@ const TimelineEvent = ({ title, date }: { title: string; date: string }) => {
 };
 export default function TimelineSection() {
 	return (
-		<section className="relative w-full py-24 px-8 md:px-16 xl:px-96 text-white overflow-clip">
+		<section className="relative w-full py-96 md:py-24 px-8 md:px-16 xl:px-96 text-white overflow-clip">
 			{/* <BGPATTERN /> */}
 			<BGIMG src={timeline_bg} />
 			<h1
