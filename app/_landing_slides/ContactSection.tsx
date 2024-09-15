@@ -54,7 +54,7 @@ export default function ContactSection() {
 							/>
 						</div>
 					</Link>
-					<ContactCard nama="Choiru" whatsapp="85158489469" />
+
 					<ContactCard nama="Fauzan (SMP)" whatsapp="87719905129" />
 					<ContactCard nama="Nabila (SMA)" whatsapp="81545615907" />
 				</div>
