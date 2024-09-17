@@ -38,14 +38,6 @@ export default function QNASection() {
 				Pertanyaan & Jawaban
 			</h1>
 			<Question
-				question="Berapa maksimal banyak tim yang dapat dikirim?"
-				answer="Setiap sekolah diperbolehkan mengikutsertakan maksimal 2 tim"
-			/>
-			<Question
-				question="Berapa banyak jumlah anggota pasukan setiap tim?"
-				answer="Setiap tim terdiri dari 12 atau 15 anggota pasukan dan satu komandan, serta dengan dua orang cadangan (tidak wajib)"
-			/>
-			<Question
 				question="Bagaimana saya mendaftar?"
 				answer={
 					<p>
@@ -55,6 +47,30 @@ export default function QNASection() {
 						</Link>
 					</p>
 				}
+			/>
+			<Question
+				question="Apa saja benefit yang didapatkan jika mengikuti SIMBARA XIII? "
+				answer="Pada edisi SIMBARA XIII akan terdapat belasan juara dan hadiah jutaan rupiah + akan mendapatkan sertifikat."
+			/>
+			<Question
+				question="Bagaimana jika peserta lomba membawa kendaraan seperti bus? "
+				answer="Setelah peserta lomba sudah diturunkan disekitar area SMA Negeri 55 Jakarta. Bus akan diarahkan ke Taman Makam Pahlawan sebagai tempat parkir kendaraan untuk peserta lomba SIMBARA XIII."
+			/>
+			<Question
+				question="Kapan peserta lomba dapat melakukan registrasi ulang? "
+				answer="Peserta lomba dapat melakukan registrasi ulang saat hari - H, pada pagi hari."
+			/>
+			<Question
+				question="Kapan terakhir untuk menyerahkan berkas dan pelunasan? "
+				answer="Terakhir peserta lomba dapat menyerahkan berkas dan pelunasan pada saat Technical Meeting (TM)"
+			/>
+			<Question
+				question="Bagaimana jika melakukan pendaftaran setelah Technical Meeting (TM)? "
+				answer="Jika melakukan pendaftaran setelah Technical Meeting maka wajib untuk menyerahkan berkas dan langsung melunaskan pembayaran. "
+			/>
+			<Question
+				question="Berapa banyak kouta peserta lomba untuk SMP/MTS dan SMA/SMK/MA? "
+				answer="Kuota untuk SIMBARA XIII adalah 21 peserta lomba untuk SMP/MTS se-derajat dan 21 peserta lomba untuk SMA/SMK/MA se-derajat."
 			/>
 		</section>
 	);

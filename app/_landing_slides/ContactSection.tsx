@@ -29,11 +29,11 @@ function ContactCard({ nama, whatsapp }: { nama: string; whatsapp: string }) {
 export default function ContactSection() {
 	return (
 		<section className="relative">
-			<QNASection />
 			<section className="relative w-full py-12 px-8 xl:px-96  text-white">
 				<h1
 					className="text-3xl md:text-4xl font-bold text-center drop-shadow-good mb-12"
-					data-aos="fade-up">
+					data-aos="fade-up"
+					>
 					Contact Us!
 				</h1>
 				<div className="flex flex-col gap-y-4">
@@ -59,6 +59,7 @@ export default function ContactSection() {
 					<ContactCard nama="Nabila (SMA)" whatsapp="81545615907" />
 				</div>
 			</section>
+			<QNASection />
 			<BGIMG src={contact_bg} />
 		</section>
 	);

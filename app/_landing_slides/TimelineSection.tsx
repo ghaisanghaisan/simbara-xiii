@@ -1,5 +1,5 @@
 import { timeline_bg } from "@/public/backgrounds";
-import { card_orange } from "@/public/elements";
+import { card_orange, card_orange_dark} from "@/public/elements";
 import Image from "next/image";
 import BGIMG from "../_components/BgIMG";
 
@@ -77,7 +77,7 @@ export default function TimelineSection() {
 			<ul className="timeline timeline-vertical mt-24">
 				<li>
 					<TimelineLeft>
-						<TimelineEvent title="Pembukaan Registrasi" date="4 September" />
+						<TimelineEvent title="Pembukaan Registrasi" date="20 September" />
 					</TimelineLeft>
 					<div className="timeline-middle">
 						<TimelineNumber num={1} />
@@ -95,7 +95,7 @@ export default function TimelineSection() {
 						data-aos-offset={pointOffset}
 					/>
 					<TimelineRight>
-						<TimelineEvent title="Technical Meeting" date="9 November" />
+						<TimelineEvent title="Technical Meeting" date="3 November" />
 					</TimelineRight>
 					<div className="timeline-middle">
 						<TimelineNumber num={2} />

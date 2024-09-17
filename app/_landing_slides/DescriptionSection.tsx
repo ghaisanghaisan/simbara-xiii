@@ -31,7 +31,7 @@ export default function DescSection() {
 				/>
 				<div
 					className=" text-xl md:text-2xl  font-black py-6 rounded-sm hover:drop-shadow-glowRed
-				transition-all ease-in-out duration-500">
+				transition-all ease-in-out duration-500 hover:scale-110">
 					Daftar Sekarang!
 				</div>
 			</Link>

@@ -69,6 +69,15 @@ export default function Footer() {
 					<li className="hover:text-flamingo hover:drop-shadow-glowRed transition duration-150 ease-in">
 						<Link href="/registrasi">Registrasi</Link>
 					</li>
+					<li className="hover:text-flamingo hover:drop-shadow-glowRed transition duration-150 ease-in">
+						<Link href="/tentang-kami">Tentang Kami</Link>
+					</li>
+					<li className="hover:text-flamingo hover:drop-shadow-glowRed transition duration-150 ease-in">
+						<Link href="/peraturan">Peraturan</Link>
+					</li>
+					<li className="hover:text-flamingo hover:drop-shadow-glowRed transition duration-150 ease-in">
+						<Link href="/snk">Syarat & Ketentuan</Link>
+					</li>
 				</ul>
 			</div>
 			<div className="text-xs md:text-lg py-6">

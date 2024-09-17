@@ -56,11 +56,13 @@ function CountdownRenderer({
 function HeroSection() {
 	return (
 		<section className="w-full h-[85vh]  flex flex-col items-center justify-center relative text-center ">
-			<BGIMG src={hero_bg} />;
+			<BGIMG src={hero_bg} />
 			<Image
 				alt="Logo Simbara"
 				src={Logo}
-				className="w-auto h-2/5 md:h-1/2 aspect-square z-10"
+				className="w-auto h-2/5 md:h-1/2 aspect-square z-10 "
+				data-aos="zoom-in"
+				data-aos-duration="1000"
 			/>
 			{/* <svg
 				className="w-[100vw] h-full absolute bottom-0 fill-base-100"
@@ -68,7 +70,10 @@ function HeroSection() {
 				viewBox="0 0 2 12">
 				<polygon points="0,12 2,12 1,6" />
 			</svg> */}
-			<h1 className="text-2xl md:text-4xl mt-8 text-bcyan font-bold z-10 drop-shadow-glow">
+			<h1
+				className="text-2xl md:text-4xl mt-8 text-flamingo font-bold z-10 drop-shadow-glowRed"
+				data-aos="fade-in"
+				data-aos-delay="500">
 				Utopian Visionary Quest
 			</h1>
 		</section>
@@ -78,7 +83,9 @@ function HeroSection() {
 function CountdownSection() {
 	return (
 		<section className="w-full h-[22vh] flex justify-center items-start relative">
-			<h1 className="absolute -top-12 text-lg font-bold">Saksikan dalam</h1>
+			<h1 className="absolute text-white -top-12 text-lg font-bold">
+				Saksikan dalam
+			</h1>
 			<Countdown date={new Date(2024, 10, 16)} renderer={CountdownRenderer} />
 		</section>
 	);
