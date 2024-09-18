@@ -7,23 +7,23 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const jura = Jura({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-	title: "SIMBARA XIII",
-	description: "Utopian Visionary Quest",
+  title: "SIMBARA XIII",
+  description: "Utopian Visionary Quest",
 };
 
 export default function RootLayout({
-	children,
+  children,
 }: Readonly<{
-	children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-	return (
-		<html lang="en">
-			<SpeedInsights />
-			<body className={jura.className}>
-				<Navbar />
-				{children}
-				<Footer />
-			</body>
-		</html>
-	);
+  return (
+    <html lang="en">
+      <SpeedInsights />
+      <body className={jura.className}>
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
 }
