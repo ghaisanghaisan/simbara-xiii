@@ -28,6 +28,6 @@ return <section className="px-4 md:px-48"><div className="carousel h-[60vh] w-fu
   <a href="#item4" className="btn btn-xs">4</a>
 </div>
     <h1 className="text-3xl font-bold text-white text-center mt-12">Tentang Kami </h1>
-    <p className="text-xl font-bold text-center text-wrap">kkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolkontolontol </p>
+    <p className="text-xl font-bold text-center text-wrap"></p>
   </section>;
 }
