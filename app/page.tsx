@@ -11,6 +11,8 @@ import ContactSection from "./_landing_slides/ContactSection";
 import DescSection from "./_landing_slides/DescriptionSection";
 import TimelineSection from "./_landing_slides/TimelineSection";
 import BGIMG from "./_components/BgIMG";
+import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 function CountDownBox({
   value,
@@ -88,9 +90,27 @@ function CountdownSection() {
 }
 
 export default function Home() {
+  const modal: any = useRef();
+  useEffect(() => {
+    modal.current!.showModal();
+  })
   return (
     <main className="overflow-hidden">
       <AOSInit />
+      <dialog ref={modal} id="my_modal_5" className="modal  modal-bottom sm:modal-middle">
+        <div className="modal-box bg-byellow">
+          <h3 className="font-bold text-2xl drop-shadow-glowRed text-flamingo">Apakah anda Peserta?</h3>
+          <p className="py-4 text-white text-xl font-bold">Registrasi sekarang juga dan bertanding di SIMBARA XIII!</p>
+          <div className="modal-action">
+            <form method="dialog">
+              {/* if there is a button in form, it will close the modal */}
+              <Link href="/registrasi" className="btn mr-4 bg-bcyan drop-shadow-glow border-0 text-white">Daftar Sekarang!</Link>
+
+              <button className="btn border-4 border-bcyan text-white bg-yellow bg-bcyan/50">Tutup</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
       <HeroSection />
       <section className="relative">
         <BGIMG src={description_bg} />
@@ -101,6 +121,6 @@ export default function Home() {
       <TimelineSection />
       {/* <QNASection />  QNA is in contact */}
       <ContactSection />
-    </main>
+    </main >
   );
 }

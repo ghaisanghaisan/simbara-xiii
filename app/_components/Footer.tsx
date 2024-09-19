@@ -67,13 +67,13 @@ export default function Footer() {
             <Link href="/home">Home</Link>
           </li>
           <li className="hover:text-flamingo hover:drop-shadow-glowRed transition duration-150 ease-in">
-            <Link href="/registrasi">Registrasi</Link>
-          </li>
-          <li className="hover:text-flamingo hover:drop-shadow-glowRed transition duration-150 ease-in">
             <Link href="/tentang-kami">Tentang Kami</Link>
           </li>
           <li className="hover:text-flamingo hover:drop-shadow-glowRed transition duration-150 ease-in">
             <Link href="/peraturan">Peraturan</Link>
+          </li>
+          <li className="hover:text-flamingo hover:drop-shadow-glowRed transition duration-150 ease-in">
+            <Link href="/registrasi">Registrasi</Link>
           </li>
         </ul>
       </div>

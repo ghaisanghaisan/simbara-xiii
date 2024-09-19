@@ -52,13 +52,13 @@ export default function Navbar() {
                 <Link href="/">Home</Link>
               </li>
               <li>
-                <Link href="/registrasi">Registrasi</Link>
-              </li>
-              <li>
                 <Link href="/tentang-kami">Tentang Kami</Link>
               </li>
               <li>
                 <Link href="/peraturan">Peraturan</Link>
+              </li>
+              <li>
+                <Link href="/registrasi">Registrasi</Link>
               </li>
               <p className="absolute bottom-2 right-4 text-bcyan text-sm">
                 Ghaisan Media{" "}
