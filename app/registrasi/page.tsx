@@ -345,7 +345,8 @@ export default function Registrasi() {
 
         <button
           type="submit"
-          className="rounded-sm p-4 bg-flamingo w-full text-3xl font-bold text-white">
+          className="relative rounded-sm p-4 w-full text-3xl font-bold text-white">
+          <BGIMG src={card_orange} />
           Submit
         </button>
       </form>
