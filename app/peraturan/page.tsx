@@ -1,8 +1,12 @@
 import { ReactNode } from "react";
+import BGIMG from "../_components/BgIMG";
+import { contact_bg } from "@/public/backgrounds";
+import { card_orange } from "@/public/elements";
 
 function RulesSection({ title, children }: { title: string, children: ReactNode }) {
   return (
-    <div className="collapse collapse-plus bg-night p-4">
+    <div className="collapse collapse-plus p-4 text-white relative">
+      <BGIMG src={card_orange} />
       <input type="checkbox" />
       <div className="collapse-title text-2xl font-bold">{title}</div>
       <div className="collapse-content">
@@ -16,7 +20,8 @@ function RulesSection({ title, children }: { title: string, children: ReactNode 
 
 export default function Peraturan() {
   return (
-    <div className="lg:px-48 py-36">
+    <div className="relative lg:px-48 py-36">
+      <BGIMG src={contact_bg} />
       <h1 className="text-3xl text-white font-bold text-center">
         Peraturan & Petunjuk SIMBARA XIII
       </h1>

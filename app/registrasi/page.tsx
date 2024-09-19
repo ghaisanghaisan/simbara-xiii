@@ -2,6 +2,9 @@
 
 import Link from "next/link";
 import { useCallback, useRef, useState } from "react";
+import BGIMG from "../_components/BgIMG";
+import { hero_bg } from "@/public/backgrounds";
+import { card_orange } from "@/public/elements";
 
 const readfile = (file: any) => {
   const temp_fr = new FileReader();
@@ -52,7 +55,8 @@ const InputSection = ({
   onChange?: (e: any) => void;
 }) => {
   return (
-    <div className="bg-night px-6 md:px-12 py-6 rounded-lg">
+    <div className="relative px-6 md:px-12 py-6 rounded-lg">
+      <BGIMG src={card_orange} />
       <h2 className="text-xl mb-4 font-bold">{title}</h2>
       {type === "text" ? (
         <input
@@ -72,8 +76,8 @@ const InputSection = ({
           <select
             name={name}
             className="select w-full max-w-xs"
-            onChange={onChange}>
-            <option disabled selected>
+            onChange={onChange} value="Pilih jumlah pasukan mu">
+            <option disabled>
               Pilih jumlah pasukan mu
             </option>
             <option>12</option>
@@ -214,7 +218,8 @@ export default function Registrasi() {
     // console.log(formState);
   };
   return (
-    <section className="bg-base-100 text-white py-32 px-2 xl:px-96">
+    <section className="relative text-white py-32 px-2 xl:px-96">
+      <BGIMG src={hero_bg} />
       <div
         className={`${loading ? "grid" : "hidden"
           } fixed w-screen h-screen bg-black/75 top-0 -left-0 z-50 place-items-center`}>
@@ -236,7 +241,8 @@ export default function Registrasi() {
         </div>
       </dialog>
       <h1 className="text-center text-white font-bold text-3xl ">Registrasi</h1>
-      <div className="bg-night px-6 md:px-12 py-6 rounded-lg mt-12">
+      <div className="relative night px-6 md:px-12 py-6 rounded-lg mt-12">
+        <BGIMG src={card_orange} />
         <h1 className="text-xl font-bold">Baca terlebih dahulu</h1>
         <ol className="list-decimal list-inside text-xl mt-2">
           <li>
