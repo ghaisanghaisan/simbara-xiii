@@ -67,7 +67,7 @@ function HeroSection() {
 				<polygon points="0,12 2,12 1,6" />
 			</svg> */}
       <h1
-        className="text-2xl md:text-4xl mt-8 text-byellow font-bold z-10 drop-shadow-glowRed"
+        className="text-2xl md:text-4xl mt-8 text-byellow font-bold z-10 drop-shadow-glow"
         data-aos="fade-in"
         data-aos-delay="500">
         Utopian Visionary Quest

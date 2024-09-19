@@ -30,12 +30,14 @@ export default function Navbar() {
       <Link href="/" className="h-full w-auto aspect-square">
         <Image src={SIMBARA} alt="simbara" height="400" width="400" />
       </Link>
-      <div className="h-full p-2 md:p-3 rounded-md w-auto aspect-square hover:bg-base-100">
-        <div className="drawer drawer-end">
+      <div className="h-full p-2 md:p-3 rounded-md w-auto aspect-square hover:bg-slate-900">
+        <div className="drawer drawer-end ">
           <input id="my-drawer" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content">
             {/* Page content here */}
-            <label htmlFor="my-drawer" className="hover:cursor-pointer ">
+            <label
+              htmlFor="my-drawer"
+              className="hover:cursor-pointer hover:bg-black ">
               <MenuIcon />
             </label>
           </div>
@@ -44,7 +46,7 @@ export default function Navbar() {
               htmlFor="my-drawer"
               aria-label="close sidebar"
               className="drawer-overlay"></label>
-            <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4 text-xl">
+            <ul className="menu bg-night min-h-full w-80 p-4 text-xl text-white">
               {/* Sidebar content here */}
               <li>
                 <Link href="/">Home</Link>

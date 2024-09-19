@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import BGIMG from "../_components/BgIMG";
 import { hero_bg } from "@/public/backgrounds";
 import { card_orange } from "@/public/elements";
@@ -75,11 +75,10 @@ const InputSection = ({
         <>
           <select
             name={name}
-            className="select w-full max-w-xs"
-            onChange={onChange} value="Pilih jumlah pasukan mu">
-            <option disabled>
-              Pilih jumlah pasukan mu
-            </option>
+            className="select w-full max-w-xs bg-white text-black font-bold"
+            onChange={onChange}
+            value={value}>
+            <option disabled>Pilih jumlah pasukan mu</option>
             <option>12</option>
             <option>15</option>
           </select>
@@ -92,7 +91,7 @@ const InputSection = ({
           <input
             type="file"
             name={name}
-            className="file-input file-input-secondary file-input-bordered file-input-md w-full text-bcyan"
+            className="file-input file-input-secondary file-input-bordered file-input-md w-full text-bcyan font-bold"
             required
           />
         </>

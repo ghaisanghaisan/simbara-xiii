@@ -58,11 +58,11 @@ export default function Footer() {
         alt="SIMBARA XIII"
         height="400"
         width="400"
-        className="hover:drop-shadow-glowRed transition duration-150 ease-in w-auto h-20 md:h-40 aspect-square grayscale hover:grayscale-0"
+        className="hover:drop-shadow-glowRed transition duration-150 ease-in w-auto h-20 md:h-40 aspect-square "
       />
       <div className="py-4">
         <h1 className="text-md md:text-xl font-bold text-bcyan">Links</h1>
-        <ul className="mt-2 text-md md:text-xl">
+        <ul className="text-white mt-2 text-md md:text-xl">
           <li className="hover:text-flamingo hover:drop-shadow-glowRed transition duration-150 ease-in">
             <Link href="/home">Home</Link>
           </li>
