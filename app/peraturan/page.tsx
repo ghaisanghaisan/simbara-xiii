@@ -118,8 +118,8 @@ export default function Peraturan() {
             menghubungi contact person terlebih dahulu.
           </li>
           <li>
-            Pelunasan pendaftaran paling lambat dilakukan pada tanggal 28
-            Oktober 2023 saat Technical Meeting.
+            Pelunasan pendaftaran paling lambat dilakukan pada tanggal 3
+            November 2024 saat Technical Meeting.
           </li>
           <li>
             Apabila peserta mengundurkan diri maka uang pendaftaran hanya bisa
@@ -148,11 +148,11 @@ export default function Peraturan() {
             berikut:
             <ul className="list-disc ml-8">
               <li>
-                Mengisi link website yang ada di link bio instagram @paskibra55
+                Melakukan pendaftaran pada website simbara.site
               </li>
               <li>
                 Foto serta nama peserta dengan format yang telah disediakan
-                (foto diwajibkan background merah dan formal) dan foto kartu pelajar..
+                (foto diwajibkan background merah dan formal) dan foto kartu pelajar.
               </li>
               <li>Surat Keterangan Sekolah</li>
               <li>Bukti pembayaran tiap masing-masing pasukan</li>
@@ -182,7 +182,7 @@ export default function Peraturan() {
         </RulesSection>
         <RulesSection title="Dewan Juri">
           <li>
-            Dewan juri terdiri dari 3 matra TNI, 2 orang juri Variasi Formasi
+            Dewan juri terdiri dari 3 TNI, 2 orang juri Variasi Formasi
             dan 1 orang juri kostum.
           </li>
           <li>
