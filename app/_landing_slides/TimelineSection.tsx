@@ -57,10 +57,10 @@ const TimelineEvent = ({ title, date }: { title: string; date: string }) => {
 			<h1 className="text-md md:text-3xl font-bold drop-shadow-glowYellow">
 				{title}
 			</h1>
-			<p className="mt-2 text-xs md:text-lg font-bold text-bcyan drop-shadow-glow">
+			<div className="mt-2 text-xs md:text-lg font-bold text-bcyan drop-shadow-glow">
 				{date} <br className="md:hidden" />
 				2024
-			</p>
+			</div>
 		</div>
 	);
 };

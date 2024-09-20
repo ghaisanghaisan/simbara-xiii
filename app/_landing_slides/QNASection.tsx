@@ -24,7 +24,7 @@ export default function QNASection() {
           <div className="collapse-title ">
             <p className="text-lg md:text-2xl font-bold">{question}</p>
           </div>
-          <div className="collapse-content"><p className=" text-lg md:text-xl">{answer}</p></div>
+          <div className="collapse-content text-lg md:text-xl">{answer}</div>
         </div>
       </div>
     );

@@ -30,6 +30,12 @@ export default function DescSection() {
           Daftar Sekarang!
         </div>
       </Link>
+      <Link
+        href="/JUKNIS_JUKLAK_SIMBARA_XIII.pdf"
+        download="JUKNIS_JUKLAK_SIMBARA_XIII.pdf"
+        className="text-2xl text-bcyan drop-shadow-glow">
+        Download Juknis & Juklak disini!
+      </Link>
     </section>
   );
 }
