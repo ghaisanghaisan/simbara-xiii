@@ -60,9 +60,6 @@ export default function Navbar() {
               <li>
                 <Link href="/registrasi">Registrasi</Link>
               </li>
-              <p className="absolute bottom-2 right-4 text-bcyan text-sm">
-                Ghaisan Media{" "}
-              </p>
             </ul>
           </div>
         </div>
