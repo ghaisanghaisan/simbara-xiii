@@ -64,7 +64,7 @@ export default function Footer() {
         <h1 className="text-md md:text-xl font-bold text-bcyan">Links</h1>
         <ul className="text-white mt-2 text-md md:text-xl">
           <li className="hover:text-flamingo hover:drop-shadow-glowRed transition duration-150 ease-in">
-            <Link href="/home">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li className="hover:text-flamingo hover:drop-shadow-glowRed transition duration-150 ease-in">
             <Link href="/tentang-kami">Tentang Kami</Link>
