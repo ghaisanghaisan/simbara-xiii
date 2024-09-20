@@ -54,7 +54,7 @@ export default function QNASection() {
       />
       <Question
         question="Bagaimana jika peserta lomba membawa kendaraan seperti bus? "
-        answer="Setelah peserta lomba sudah diturunkan disekitar area SMA Negeri 55 Jakarta. Bus akan diarahkan ke Taman Makam Pahlawan sebagai tempat parkir kendaraan untuk peserta lomba SIMBARA XIII."
+        answer="Setelah peserta lomba sudah diturunkan disekitar area SMA Negeri 55 Jakarta. Bus akan diarahkan ke parkiran depan Taman Makam Pahlawan sebagai tempat parkir kendaraan untuk peserta lomba SIMBARA XIII."
       />
       <Question
         question="Kapan peserta lomba dapat melakukan registrasi ulang? "

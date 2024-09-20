@@ -69,7 +69,7 @@ function HeroSection() {
 				<polygon points="0,12 2,12 1,6" />
 			</svg> */}
       <h1
-        className="text-2xl md:text-4xl mt-8 text-byellow font-bold z-10 drop-shadow-glow"
+        className="text-2xl md:text-4xl mt-8 text-byellow font-bold z-10 "
         data-aos="fade-in"
         data-aos-delay="500">
         Utopian Visionary Quest
@@ -99,12 +99,12 @@ export default function Home() {
       <AOSInit />
       <dialog ref={modal} id="my_modal_5" className="modal  modal-bottom sm:modal-middle">
         <div className="modal-box bg-byellow">
-          <h3 className="font-bold text-2xl drop-shadow-glowRed text-flamingo">Apakah anda Peserta?</h3>
+          <h3 className="font-bold text-2xl text-flamingo">Apakah anda Peserta?</h3>
           <p className="py-4 text-white text-xl font-bold">Registrasi sekarang juga dan bertanding di SIMBARA XIII!</p>
           <div className="modal-action">
             <form method="dialog">
               {/* if there is a button in form, it will close the modal */}
-              <Link href="/registrasi" className="btn mr-4 bg-bcyan drop-shadow-glow border-0 text-white">Daftar Sekarang!</Link>
+              <Link href="/registrasi" className="btn mr-4 bg-bcyan border-0 text-white">Daftar Sekarang!</Link>
 
               <button className="btn border-4 border-bcyan text-white bg-yellow bg-bcyan/50">Tutup</button>
             </form>

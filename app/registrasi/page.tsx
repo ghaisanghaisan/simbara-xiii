@@ -61,7 +61,7 @@ const InputSection = ({
       {type === "text" ? (
         <input
           name={name}
-          type="text"
+          type={type}
           className="w-full text-black p-2 font-bold"
           value={value}
           onChange={onChange}
@@ -78,7 +78,7 @@ const InputSection = ({
             className="select w-full max-w-xs bg-white text-black font-bold"
             onChange={onChange}
             value={value}>
-            <option disabled>Pilih jumlah pasukan mu</option>
+            <option disabled selected>Pilih jumlah pasukan mu</option>
             <option>12</option>
             <option>15</option>
           </select>
@@ -117,7 +117,7 @@ export default function Registrasi() {
     Email: "",
     Tim: "",
     Asal: "",
-    Jumlah: "",
+    Jumlah: "12",
     Pelatih: "",
     NoPelatih: "",
     Formulir: null,
@@ -242,7 +242,7 @@ export default function Registrasi() {
       <h1 className="text-center text-white font-bold text-3xl ">Registrasi</h1>
       <div className="relative night px-6 md:px-12 py-6 rounded-lg mt-12">
         <BGIMG src={card_orange} />
-        <h1 className="text-xl font-bold">Baca terlebih dahulu</h1>
+        <h1 className="text-xl font-bold">Perhatikan sebelum mendaftar!</h1>
         <ol className="list-decimal list-inside text-xl mt-2">
           <li>
             Pastikan sudah membaca{" "}
@@ -260,6 +260,12 @@ export default function Registrasi() {
             <Link href="/peraturan" className="font-bold text-bcyan">
               Syarat & Ketentuan Lomba.
             </Link>
+          </li>
+          <li>
+            Surat surat dan dokumen pendukung diwajibkan dibawa secara fisik saat technical meeting.
+          </li>
+          <li>
+            Setelah klik submit harap menunggu hingga muncul pesan sukses
           </li>
         </ol>
       </div>
@@ -298,7 +304,7 @@ export default function Registrasi() {
         />
         <InputSection
           title="Nomor Pelatih"
-          name="No Pelatih"
+          name="NoPelatih"
           type="text"
           desc="Masukkan nomor pelatih anda"
           value={formState["NoPelatih"]}
@@ -344,8 +350,7 @@ export default function Registrasi() {
 
         <button
           type="submit"
-          className="relative rounded-sm p-4 w-full text-3xl font-bold text-white">
-          <BGIMG src={card_orange} />
+          className="bg-flamingo relative rounded-sm p-6 w-full text-3xl font-bold text-white">
           Submit
         </button>
       </form>
