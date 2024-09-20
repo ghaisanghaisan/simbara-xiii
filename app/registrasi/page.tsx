@@ -269,7 +269,8 @@ export default function Registrasi() {
           </li>
         </ol>
       </div>
-      <form method="POST" onSubmit={onSubmit} className="space-y-6 mt-12 ">
+      {/*<form method="POST" onSubmit={onSubmit} className="space-y-6 mt-12" encType="multipart/form-data">*/}
+      <form method="POST" action="https://www.formbackend.com/f/72a939de54345d67" className="space-y-6 mt-12" encType="multipart/form-data">
         <InputSection
           title="Nama Perwakilan"
           name="Nama"
@@ -283,7 +284,7 @@ export default function Registrasi() {
           name="Nomor"
           type="text"
           value={formState["Nomor"]}
-          desc="Masukkan nomor aktif perwakilan"
+          desc="Contoh penulisan '08XX-XXXX-XXXX'"
           onChange={handleTextInput}
         />
         <InputSection
@@ -306,7 +307,7 @@ export default function Registrasi() {
           title="Nomor Pelatih"
           name="NoPelatih"
           type="text"
-          desc="Masukkan nomor pelatih anda"
+          desc="Contoh penulisan '08XX-XXXX-XXXX'"
           value={formState["NoPelatih"]}
           onChange={handleTextInput}
         />
