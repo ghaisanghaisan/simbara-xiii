@@ -105,59 +105,23 @@ export default function Peraturan() {
         </RulesSection>
 
         <RulesSection title="Ketentuan Pendaftaran & Daftar Ulang">
-          <li>Biaya pendaftaran: Rp. 550.000,00/tim (include uang WO).</li>
-          <li>
-            Sistem pembayaran dapat dilakukan melalui transfer ke 1280717343
-            (BCA) a.n (CIKA DESTRIYANI PUTRI). Setiap pasukan diwajibkan untuk
-            DP (apabila tidak bisa langsung lunas) sebesar 50% dari biaya
-            pendaftaran.
-          </li>
-          <li>
-            Pendaftaran dapat dilakukan secara langsung di SMA Negeri 55 Jakarta
-            (Jl. Minyak Duren Tiga, Pancoran, Jakarta Selatan) dengan
-            menghubungi contact person terlebih dahulu.
-          </li>
-          <li>
-            Pelunasan pendaftaran paling lambat dilakukan pada tanggal 3
-            November 2024 saat Technical Meeting.
-          </li>
-          <li>
-            Apabila peserta mengundurkan diri maka uang pendaftaran hanya bisa
-            dikembalikan sebesar 50% atau Rp. 250.000,00 dan DP tidak dapat
-            dikembalikan.
-          </li>
-          <li>
-            Apabila total peserta yang mendaftar sudah mencapai kuota, maka
-            pendaftaran akan ditutup.
-          </li>
-          <li>
-            Peserta wajib mendaftar ulang dan apabila peserta tidak mendaftar
-            ulang (tanpa keterangan), maka dianggap mengundurkan diri.
-          </li>
-          <li>
-            Pendaftaran ulang saat hari perlombaan dimulai pukul 05.30 s.d 07.00
-            WIB.
-          </li>
-          <li>
-            Apabila peserta terlambat mendaftar ulang maka akan dikenakan
-            pengurangan poin 50 poin/tim.
-          </li>
-          <li>
-            Kelengkapan administrasi yang harus disiapkan peserta dan paling
-            lambat diserahkan pada saat Technical Meeting adalah sebagai
-            berikut:
-            <ul className="list-disc ml-8">
-              <li>
-                Melakukan pendaftaran pada website simbara.site
-              </li>
-              <li>
-                Foto serta nama peserta dengan format yang telah disediakan
-                (foto diwajibkan background merah dan formal) dan foto kartu pelajar.
-              </li>
-              <li>Surat Keterangan Sekolah</li>
-              <li>Bukti pembayaran tiap masing-masing pasukan</li>
-            </ul>
-          </li>
+          <li>Biaya pendaftaran: Rp. 550.000,00/tim.</li>
+  <li>Sistem pembayaran dapat dilakukan melalui transfer ke 1280717343 (BCA) a.n (CIKA DESTRIYANI PUTRI). Setiap pasukan diwajibkan untuk DP (apabila tidak bisa langsung lunas) sebesar 50% dari biaya pendaftaran.</li>
+  <li>Pendaftaran dapat dilakukan secara langsung di SMA Negeri 55 Jakarta (Jl. Minyak Duren Tiga, Pancoran, Jakarta Selatan) dengan menghubungi contact person terlebih dahulu.</li>
+  <li>Pelunasan pendaftaran paling lambat dilakukan pada tanggal 3 November 2024 saat Technical Meeting.</li>
+  <li>Apabila peserta mengundurkan diri maka uang pendaftaran hanya bisa dikembalikan sebesar 50% atau Rp. 275.000,00 dan DP tidak dapat dikembalikan.</li>
+  <li>Apabila total peserta yang mendaftar sudah mencapai kuota, maka pendaftaran akan ditutup.</li>
+  <li>Peserta wajib mendaftar ulang dan apabila peserta tidak mendaftar ulang (tanpa keterangan), maka dianggap mengundurkan diri.</li>
+  <li>Pendaftaran ulang saat hari perlombaan dimulai pukul 05.30 s.d 07.00 WIB.</li>
+  <li>Apabila peserta terlambat mendaftar ulang maka akan dikenakan pengurangan poin 50 poin/tim.</li>
+  <li>Kelengkapan administrasi yang harus disiapkan peserta dan paling lambat diserahkan pada saat Technical Meeting adalah sebagai berikut:
+    <ul className="list-disc ml-8">
+      <li>Melakukan pendaftaran pada website Simbara.site</li>
+      <li>Foto serta nama peserta dengan format yang telah disediakan (foto diwajibkan background merah dan formal) dan foto kartu pelajar.</li>
+      <li>Surat Keterangan Sekolah</li>
+      <li>Bukti pembayaran tiap masing-masing pasukan</li>
+    </ul>
+  </li>
         </RulesSection>
         <RulesSection title="Ketentuan Pakaian">
           <li>
